@@ -1,0 +1,1 @@
+We did not negotiate a plan. We just went nose deep into developing the page. Or at least the current writer of this document; Fabian. Given this document is also written on the third day of the deep dive. It's too late to discuss anything.
