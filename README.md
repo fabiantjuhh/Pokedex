@@ -59,7 +59,7 @@ Feel free to explore and modify the code to suit your needs.
 
 ## Navigating the App
 
-All Pokémon and its details are loaded using [A custom-tailored pokémon api](https://github.com/Lythical1/lythical1.github.io/tree/main/public/api), by [Lythical](https://github.com/Lythical1)
+All Pokémon and its details are loaded using [A custom-tailored pokémon api](https://github.com/Lythical1/lythical1.github.io/tree/main/public/api), by [Lythical](https://github.com/Lythical1)'s team
 with the exception of sprites due to a memory leak. For sprites, the infamous PokéAPI is used.
 
 This app consists out of a few svelte components all connected to one `+page.svelte`
