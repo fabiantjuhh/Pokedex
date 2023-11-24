@@ -41,7 +41,7 @@ Now that the dependencies are installed, you can run the app locally. Execute th
 npm run dev
 ```
 
-This will start the development server. Open your browser and navigate to [http://localhost:5000](http://localhost:5000) to view the app.
+This will start the development server. Open your browser and navigate to [http://localhost:5173](http://localhost:5173) to view the app.
 
 If you want to open the dev server immediately:
 
