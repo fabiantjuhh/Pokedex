@@ -1,3 +1,6 @@
+<img src="Pocket Dex/static/Frontpage.png" style="height: auto; width: auto" />
+<img src="Pocket Dex/static/modal.png" style="height: auto; width: auto" />
+
 # Pokédex Deep-Dive Project Bit-Academy
 
 Welcome to our Svelte app! This project was built using the Svelte Kit framework & Tailwind CSS.
