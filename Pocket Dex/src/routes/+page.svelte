@@ -17,7 +17,7 @@
 		loading = true;
 
 		try {
-			const response = await fetch(`${baseUrl}pokemon?limit=1302`); // Fetching the first 151 Pokémon
+			const response = await fetch(`${baseUrl}pokemon?limit=1302`); // Fetching all of the Pokémon
 			const data = await response.json();
 			const pokemonArray = data.results;
 
