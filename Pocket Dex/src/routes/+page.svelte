@@ -5,6 +5,9 @@
 	let pokemonList = [];
 	let loading = false;
 	// @ts-ignore
+	/**
+	 * @type {null}
+	 */
 	let selectedPokemon = null;
 	let showModal = false;
 	let searchTerm = '';
@@ -17,7 +20,7 @@
 		loading = true;
 
 		try {
-			const response = await fetch(`${baseUrl}pokemon?limit=1302`); // Fetching the first 151 Pokémon
+			const response = await fetch(`${baseUrl}pokemon?limit=1080`); // It seems to break depending on the limit
 			const data = await response.json();
 			const pokemonArray = data.results;
 
