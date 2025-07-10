@@ -1,6 +1,5 @@
 <script>
 	import { onMount } from 'svelte';
-	import PokeModal from './modal.svelte';
 	// @ts-ignore
 	let pokemonList = [];
 	let loading = false;
@@ -9,7 +8,6 @@
 	 * @type {null}
 	 */
 	let selectedPokemon = null;
-	let showModal = false;
 	let searchTerm = '';
 	let selectedType = 'all'; // Default selection is "all"
 	let filteredPokemon = [];
@@ -56,7 +54,6 @@
 	// @ts-ignore
 	function showPokemonDetails(pokemon) {
 		selectedPokemon = pokemon;
-		showModal = true;
 	}
 
 	// @ts-ignore
@@ -147,12 +144,10 @@
 					{:else}
 						<ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
 							{#each filteredPokemon as { name, types, sprite, moves, baseExperience, number } (number)}
-								<button
-									on:click={() =>
-										showPokemonDetails({ name, types, moves, baseExperience, sprite, number })}
+								<a href="/pokemon/{number}" on:click|preventDefault={() => showPokemonDetails({ name, types, sprite, moves, baseExperience, number })} class="hover:shadow-md hover:shadow-gray-250/75 hover:rounded"
 								>
 									<div
-										class="flex-shrink-0 p-4 bg-gray-200 shadow-md shadow-gray-500/75 rounded-lg mx-auto"
+										class="flex-shrink-0 p-4 bg-gray-200 shadow-md shadow-gray-250/75 rounded-lg mx-auto flex flex-col items-center"
 									>
 										<img
 											src={sprite}
@@ -172,7 +167,7 @@
 											{/each}
 										</div>
 									</div>
-								</button>
+								</a>
 							{/each}
 						</ul>
 					{/if}
@@ -181,7 +176,3 @@
 		</div>
 	</div>
 </main>
-
-{#if selectedPokemon}
-	<PokeModal bind:pokemon={selectedPokemon} bind:showModal />
-{/if}

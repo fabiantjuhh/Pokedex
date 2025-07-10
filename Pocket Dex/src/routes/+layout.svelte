@@ -2,6 +2,6 @@
 	import '../app.css';
 </script>
 
-<body class="bg-stone-200">
+<body class="bg-gray-200">
 	<slot />
 </body>
